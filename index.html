@@ -9,7 +9,13 @@
 </head>
 <body>
     <input type="file" name="file" id="fileInput">
-    <canvas id="canvas" width="600" height="400"></canvas>
+    <canvas id="canvas" width="1000" height="600"></canvas>
+    <fieldset id="filters">
+        Jasność: <input type="number" name="brightness" id="brightness" min="0" value="50"   >
+        Kontrast: <input type="number" name="contrast" id="contrast" value="50">
+        Nasycenie: <input type="number" name="saturation" id="saturation" value="50">
+    </fieldset>
+
 </body>
 <script src="main.js"></script>
 </html>
