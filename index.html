@@ -11,9 +11,10 @@
     <input type="file" name="file" id="fileInput">
     <canvas id="canvas" width="1000" height="600"></canvas>
     <fieldset id="filters">
-        Jasność: <input type="number" name="brightness" id="brightness" min="0" value="50"   >
-        Kontrast: <input type="number" name="contrast" id="contrast" value="50">
-        Nasycenie: <input type="number" name="saturation" id="saturation" value="50">
+        Jasność: <input type="range" name="brightness" id="brightness" min="100" max="500">
+        Kontrast: <input type="range" name="contrast" id="contrast" max="150">
+        Nasycenie: <input type="range" name="saturation" id="saturation" max="150">
+        
     </fieldset>
 
 </body>

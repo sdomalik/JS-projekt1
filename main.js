@@ -4,6 +4,7 @@ const input = document.querySelector('#fileInput')
 const brightness = document.querySelector("#brightness");
 const contrast = document.querySelector("#contrast");
 const saturation = document.querySelector("#saturation")
+const submit = document.querySelector("#submit")
 
 let img = new Image(); //new object
 
@@ -22,26 +23,26 @@ input.onchange = function(event){ //perform when file chosen
         }
     }
 }
+ 
+let satValue = 100;
+let conValue = 100;
+let brValue = 100;
 
 brightness.oninput = function(){
-    canvas.style.filter = `brightness(${this.value * 2}%)`;
+    brValue = this.value
+    useFilters();
 }
-
 contrast.oninput = function(){
-    canvas.style.filter = `contrast(${this.value * 2}%)`;
+    conValue = this.value
+    useFilters();
 }
-
 saturation.oninput = function(){
-    canvas.style.filter = `saturate(${this.value *2}% )`;
+    satValue = this.value
+    useFilters();
 }
 
-
-
-
-
-
-
-
-
-
+function useFilters(){
+    ctx.filter = `brightness(${brValue}%) contrast(${conValue}%) saturate(${satValue}%)`
+    ctx.drawImage(img,0,0,1000,600)
+}
 
