@@ -3,11 +3,42 @@
 }
 #container{
     display: flex;
-    float: left;
-} #filters{
+} 
+#kitBox{
+    padding-left: 20px;
+    display: block;
+    width: 276px;
+}
+#filters{
+    width: clac(100% - 24px);
+    margin: 0px 0px 0px 0px;
+    border-style: dotted;
     background-color: blueviolet;
-    display: flex; 
+    display: flex;
 }
 #fileInput{
+    height: 50px;
+}
+#colorBox{
+    margin-top: 15px;
+    border-style: dotted;
+    border-width: 2px;
+    width: 100%;
     display: flex;
+}
+#colorBox div{
+    width: 69px;
+    height: 75px;
+}
+#colorPurple{
+    background-color: #4B0082;
+}
+#colorGreen{
+    background-color: #008000;
+}
+#colorYellow{
+    background-color: #FFFF00;
+}
+#colorBlue{
+    background-color: #0000FF;
 }

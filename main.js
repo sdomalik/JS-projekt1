@@ -59,6 +59,7 @@ function addClick(x , y, dragging)
     clickX.push(x);
     clickY.push(y);
     clickDrag.push(dragging);
+    clickColor.push(curColor);
 }
 
 //execute when mouse button is pressed 
@@ -68,13 +69,13 @@ canvas.addEventListener('mousedown', function(e){
 
     paint = true;
     addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
-    draw();
+    redraw();
 })
 //execute when cursor is moving on canvas
 canvas.addEventListener('mousemove', function(e){
     if(paint){
         addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
-        draw();
+        redraw();
       }
 })
 //setting paint to false when mousse button is not pressed
@@ -87,8 +88,7 @@ canvas.addEventListener('mouseleave', function(e){
 })
 
 //drawing on canvas
-function draw(){
-    ctx.strokeStyle = "#df4b26";
+function redraw(){
     ctx.lineJoin = "round";
     ctx.lineWidth = 5;
 
@@ -101,13 +101,42 @@ function draw(){
          }
          ctx.lineTo(clickX[i], clickY[i]);
          ctx.closePath();
+         ctx.strokeStyle = clickColor[i];
          ctx.stroke();
       }
 }
 
+//variables for setting colors
+let colorPurple = "#4B0082";
+let colorGreen = "#008000";
+let colorYellow = "#FFFF00";
+let colorBlue = "#0000FF";
 
+let curColor = colorPurple;
+let clickColor = new Array();
 
+//functions below are setting color of pen after event click on sepcific div 
 
+let colPurple = document.querySelector("#colorPurple");
+colPurple.addEventListener('click', function(){
+    clickColor.push(colorPurple);
+    curColor = colorPurple;
+})
+let colGreen = document.querySelector("#colorGreen");
+colGreen.addEventListener('click', function(){
+    clickColor.push(colorGreen);
+    curColor = colorGreen;
+})
+let colYellow = document.querySelector("#colorYellow");
+colYellow.addEventListener('click', function(){
+    clickColor.push(colorYellow);
+    curColor = colorYellow;
+})
+let colBlue = document.querySelector("#colorBlue");
+colBlue.addEventListener('click', function(){
+    clickColor.push(colorBlue);
+    curColor = colorBlue;
+})
 
 
 

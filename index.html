@@ -9,20 +9,20 @@
 </head>
 <body>
     <div id="container">
-        <input type="file" name="file" id="fileInput">
         <canvas id="canvas" width="1000" height="600"></canvas>
         <div id="kitBox">
+            <input type="file" name="file" id="fileInput">
             <fieldset id="filters">
                 Jasność: <input type="range" name="brightness" id="brightness" min="100" max="500">
                 Kontrast: <input type="range" name="contrast" id="contrast" max="150">
                 Nasycenie: <input type="range" name="saturation" id="saturation" max="150">                
             </fieldset>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div id="colorBox">
+                <div id="colorPurple"></div>
+                <div id="colorGreen"></div>
+                <div id="colorYellow"></div>
+                <div id="colorBlue"></div>
+            </div>
         </div>
     </div>
 </body>
