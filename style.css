@@ -1,4 +1,13 @@
 #canvas{
-    border: 5px solid black;
-       
+    border: 5px solid black;       
+}
+#container{
+    display: flex;
+    float: left;
+} #filters{
+    background-color: blueviolet;
+    display: flex; 
+}
+#fileInput{
+    display: flex;
 }

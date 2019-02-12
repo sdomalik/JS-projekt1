@@ -8,15 +8,23 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="file" name="file" id="fileInput">
-    <canvas id="canvas" width="1000" height="600"></canvas>
-    <fieldset id="filters">
-        Jasność: <input type="range" name="brightness" id="brightness" min="100" max="500">
-        Kontrast: <input type="range" name="contrast" id="contrast" max="150">
-        Nasycenie: <input type="range" name="saturation" id="saturation" max="150">
-        
-    </fieldset>
-
+    <div id="container">
+        <input type="file" name="file" id="fileInput">
+        <canvas id="canvas" width="1000" height="600"></canvas>
+        <div id="kitBox">
+            <fieldset id="filters">
+                Jasność: <input type="range" name="brightness" id="brightness" min="100" max="500">
+                Kontrast: <input type="range" name="contrast" id="contrast" max="150">
+                Nasycenie: <input type="range" name="saturation" id="saturation" max="150">                
+            </fieldset>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 </body>
 <script src="main.js"></script>
 </html>
