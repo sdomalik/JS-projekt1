@@ -32,14 +32,17 @@ let brValue = 100;
 brightness.oninput = function(){ //execute when input used
     brValue = this.value // set brightness value
     useFilters(); // execute function after change
+    redraw();
 }
 contrast.oninput = function(){
     conValue = this.value
     useFilters();
+    redraw();
 }
 saturation.oninput = function(){
     satValue = this.value
     useFilters();
+    redraw();
 }
 
 function useFilters(){ //seting filters on ctx whith values from inputs
@@ -137,6 +140,4 @@ colBlue.addEventListener('click', function(){
     clickColor.push(colorBlue);
     curColor = colorBlue;
 })
-
-
 
