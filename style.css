@@ -2,27 +2,38 @@
     border: 5px solid black;       
 }
 #container{
+    background-color: cornsilk;
     display: flex;
+    justify-content: center;
 } 
 #kitBox{
-    padding-left: 20px;
-    display: block;
+    background-color: cornsilk;
+    border: black;    
+    border-style: dotted;    
+    margin-left: 20px;
+    display: flex;
+    float: left;
     width: 276px;
+    height: 290px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 #filters{
-    width: clac(100% - 24px);
+    width: calc(100% - 70px);
+    height: 150px;
+    border: none;
     margin: 0px 0px 0px 0px;
-    border-style: dotted;
-    background-color: blueviolet;
-    display: flex;
+    padding: 0px 0px 0px 70px;
+    display: flex;   
+
 }
 #fileInput{
     height: 50px;
+    width: calc(100% - 60px);
+    padding:15px 0px 0px 60px;
 }
 #colorBox{
-    margin-top: 15px;
-    border-style: dotted;
-    border-width: 2px;
     width: 100%;
     display: flex;
 }
